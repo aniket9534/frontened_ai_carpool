@@ -1,6 +1,10 @@
 import logo from "@/assets/sls_logo.png";
 
-export function Footer() {
+export function Footer({
+  openContactForm,
+}: {
+  openContactForm: () => void;
+}) {
   return (
     <footer className="relative border-t border-border bg-black/30">
       <div className="mx-auto max-w-7xl px-6 py-14 grid md:grid-cols-4 gap-10">
@@ -27,7 +31,7 @@ export function Footer() {
 
             <p className="text-sm text-[var(--electric)] font-medium">
               sales@slsyn.com
-            </p>npm 
+            </p>
           </div>
 
           <div className="mt-5 flex items-center gap-2 text-[11px] font-mono uppercase tracking-wider text-muted-foreground">
@@ -54,12 +58,21 @@ export function Footer() {
             <ul className="mt-4 space-y-2.5 text-sm">
               {c.l.map((i) => (
                 <li key={i}>
-                  <a
-                    href="#"
-                    className="hover:text-foreground text-muted-foreground transition"
-                  >
-                    {i}
-                  </a>
+                  {i === "Contact" ? (
+                    <button
+                      onClick={openContactForm}
+                      className="hover:text-foreground text-muted-foreground transition"
+                    >
+                      {i}
+                    </button>
+                  ) : (
+                    <a
+                      href="#"
+                      className="hover:text-foreground text-muted-foreground transition"
+                    >
+                      {i}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
