@@ -35,6 +35,7 @@ export function Navbar() {
         "https://script.google.com/macros/s/AKfycbwk3dhlAn0yrIRKjlzC49stxxuN32TobKKwmgpBCHc46l444KSKpNeoBrG9IZOyhANc1Q/exec",
         {
           method: "POST",
+          mode: "no-cors",
           headers: {
             "Content-Type": "application/json",
           },
@@ -52,7 +53,7 @@ export function Navbar() {
 
       setShowContactForm(false);
     } catch (error) {
-      alert("Something went wrong. Please try again.");
+      alert("Submission failed. Please try again.");
       console.error(error);
     }
   };
@@ -100,13 +101,6 @@ export function Navbar() {
           {/* Right Section */}
           <div className="flex items-center gap-3">
             <a
-              href="mailto:sales@slsyn.com"
-              className="hidden lg:inline-flex text-[13px] text-[var(--electric)] font-medium hover:opacity-80 transition"
-            >
-              sales@slsyn.com
-            </a>
-
-            <a
               href="#contact"
               className="hidden sm:inline-flex text-[13px] text-muted-foreground hover:text-foreground px-3 py-2 transition"
             >
@@ -146,7 +140,7 @@ export function Navbar() {
             </p>
 
             <form onSubmit={handleSubmit} className="mt-6 space-y-4">
-              {/* Your Name */}
+              {/* Name */}
               <div>
                 <label className="block text-sm mb-2">Your Name</label>
                 <input
@@ -159,7 +153,7 @@ export function Navbar() {
                 />
               </div>
 
-              {/* Company Name */}
+              {/* Company */}
               <div>
                 <label className="block text-sm mb-2">Company Name</label>
                 <input
