@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Activity } from "lucide-react";
+import logo from "@/assets/sls_logo.png";
 
 const links = [
   { label: "Platform", href: "#workflow" },
@@ -16,7 +16,7 @@ export function Navbar() {
       <nav className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-3.5">
         <Link to="/" className="flex items-center gap-2.5 group">
           <div className="relative h-8 w-8 rounded-lg bg-gradient-to-br from-[var(--electric)] to-[var(--neon)] grid place-items-center shadow-[0_0_24px_-4px_var(--electric)]">
-            <Activity className="h-4 w-4 text-background" strokeWidth={2.75} />
+            <img src={logo} alt="SLSYN Logo" className="h-full w-full object-contain" />
           </div>
           <div className="flex flex-col leading-none">
             <span className="text-[13px] font-semibold tracking-tight">SENTINEL<span className="text-gradient">.AI</span></span>
