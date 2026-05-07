@@ -8,6 +8,8 @@ export function Footer({
   return (
     <footer className="relative border-t border-border bg-black/30">
       <div className="mx-auto max-w-7xl px-6 py-14 grid md:grid-cols-4 gap-10">
+        
+        {/* Left Section */}
         <div className="md:col-span-2">
           <div className="flex items-center gap-2.5">
             <div className="h-10 w-10 rounded-lg overflow-hidden bg-black/40 border border-border grid place-items-center p-1">
@@ -29,17 +31,26 @@ export function Footer({
               smart cities, and global enterprises.
             </p>
 
-            <p className="text-sm text-[var(--electric)] font-medium">
-              sales@slsyn.com
-            </p>
+            {/* Emails */}
+            <div className="space-y-1">
+              <p className="text-sm text-[var(--electric)] font-medium">
+                sales@slsyn.com
+              </p>
+
+              <p className="text-sm text-[var(--electric)] font-medium">
+                contact@trustiq.tech
+              </p>
+            </div>
           </div>
 
+          {/* Status */}
           <div className="mt-5 flex items-center gap-2 text-[11px] font-mono uppercase tracking-wider text-muted-foreground">
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--neon)] animate-pulse" />
             All systems operational
           </div>
         </div>
 
+        {/* Footer Links */}
         {[
           {
             h: "Platform",
@@ -80,10 +91,11 @@ export function Footer({
         ))}
       </div>
 
+      {/* Bottom Bar */}
       <div className="border-t border-border">
         <div className="mx-auto max-w-7xl px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground font-mono">
           <span>
-            © 2026 Sentinel.AI · Built for the world's enforcement infrastructure
+            © 2026 Trustiq · Powered by SLS
           </span>
 
           <span>SOC 2 · ISO 27001 · GDPR · DPDPA</span>
